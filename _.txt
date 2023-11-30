@@ -1,0 +1,14 @@
+Na zip jsem našel jednoduše, užil jsem přímo od MS
+Ale na 7z to bylo horší
+
+Je tady plno balíčků jež mají více než 100K stažení(pub 19-21):
+SevenZip
+LZMA-SDK
+Squid-Box.SevenZipSharp
+SevenZipSharp.Net45
+SevenZipSharp.Interop
+
+k první jsem nenašel jak ji použít, chtěl bych se vyhnout vkládání exe do projektů
+
+Nainstaloval jsem SharpCompress který umí více formátů
+ale je to hovadina, mám už class SevenZip jež užívá 7z.exe, POKRAČOVAT V TOMHLE I PRO EXTRACT
