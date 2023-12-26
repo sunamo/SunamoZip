@@ -4,19 +4,16 @@
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <CodeAnalysisRuleSet>../../sunamo/sunamo.ruleset</CodeAnalysisRuleSet>
-    <Version>23.11.19.3</Version>
+    <Version>23.12.9.1</Version>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="ZA2.cs">
-    </None>
+    <None Include="ZA2.cs"></None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_.txt">
-    </Content>
+    <Content Include="_.txt"></Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="ZA2.cs">
-    </Compile>
+    <Compile Remove="ZA2.cs"></Compile>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
@@ -24,7 +21,7 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="SunamoExceptions" Version="*" />
+    <PackageReference Include="SunamoExceptions" Version="23.12.9.1" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
