@@ -3,32 +3,32 @@ namespace SunamoZip;
 public interface IZA
 {
 #if ASYNC
-        Task
+    Task
 #else
-    void
+void
 #endif
-        CreateArchive(string root);
+    CreateArchive(string root);
 
 #if ASYNC
-        Task
+    Task
 #else
-    void
+void
 #endif
-        CreateArchive(string slozka, IEnumerable<string> soubory);
+    CreateArchive(string slozka, IEnumerable<string> soubory);
 
 #if ASYNC
-        Task
+    Task
 #else
-    void
+void
 #endif
-        CreateArchive(string root, IEnumerable<string> soubory, string soubor);
+    CreateArchive(string root, IEnumerable<string> soubory, string soubor);
 
 #if ASYNC
-        Task
+    Task
 #else
-    void
+void
 #endif
-        CreateArchive(string root, string souborZip);
+    CreateArchive(string root, string souborZip);
 
     void ExtractArchive(string soubor, bool extractToSameFolder);
     void ExtractArchive(string archiveFilenameIn, string outFolder, bool extractToSameFolder);

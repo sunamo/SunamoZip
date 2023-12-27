@@ -1,6 +1,6 @@
-using SunamoZip.Extensions;
-
 namespace SunamoZip;
+
+
 
 public class ZA : IZA
 {
@@ -95,8 +95,10 @@ void
             // Just one is right
             outFolder = Path.GetDirectoryName(outFolder);
         //outFolder = Path.GetDirectoryName(outFolder);
-        ZipArchive zip = new(new FileStream(archiveFilenameIn, FileMode.Open));
-        zip.ExtractToDirectory(outFolder, true);
+
+        // todo použít ZipArchive z .net
+        //ZipArchive zip = new(new FileStream(archiveFilenameIn, FileMode.Open));
+        //zip.ExtractToDirectory(outFolder, true);
     }
 
     private IEnumerable<string> FilesFromRoot(string root)

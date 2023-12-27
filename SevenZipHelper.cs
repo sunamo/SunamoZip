@@ -1,6 +1,6 @@
-using SunamoZip.Extensions;
-
 namespace SunamoZip;
+
+
 
 public class SevenZipHelper : IZA
 {
@@ -89,8 +89,9 @@ void
         //    archive.ExtractToDirectory(dataDir + "Sample_ExtractionFolder");
         //}
 
-        ZipArchive zip = new(new FileStream(archiveFilenameIn, FileMode.Open));
-        zip.ExtractToDirectory(outFolder, true);
+        // todo použít ZipArchive .net
+        //ZipArchive zip = new(new FileStream(archiveFilenameIn, FileMode.Open));
+        //zip.ExtractToDirectory(outFolder, true);
     }
 
     public static string CreateArchive(string pathOutput, string folder, string masc)
