@@ -1,3 +1,7 @@
+using SunamoZip.Extensions;
+
+namespace SunamoZip;
+
 public class SevenZipHelper : IZA
 {
     private const string template = "7z.exe a -r \"{0}\" \"{1}{2}\"";
@@ -6,9 +10,9 @@ public class SevenZipHelper : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string slozku)
+    CreateArchive(string slozku)
     {
     }
 
@@ -16,9 +20,9 @@ public class SevenZipHelper : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string slozka, IEnumerable<string> soubory)
+    CreateArchive(string slozka, IEnumerable<string> soubory)
     {
     }
 
@@ -26,9 +30,9 @@ public class SevenZipHelper : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string slozku, IEnumerable<string> soubory, string soubor)
+    CreateArchive(string slozku, IEnumerable<string> soubory, string soubor)
     {
     }
 
@@ -36,9 +40,9 @@ public class SevenZipHelper : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string slozku, string souborZip)
+    CreateArchive(string slozku, string souborZip)
     {
     }
 

@@ -1,3 +1,5 @@
+
+namespace ad;
 /// <summary>
 /// M�lo by tu v�echno fungovat, str�vil jsem nad t�m hezk�ch p�r hodin :(
 /// </summary>
@@ -26,8 +28,8 @@ public class ZA : IZA
     }
 
     /// <summary>
-    /// Ulozi soubory A2 do A3. 
-    /// A1 je k tomu, aby se mohla zjistit relativni cesta. 
+    /// Ulozi soubory A2 do A3.
+    /// A1 je k tomu, aby se mohla zjistit relativni cesta.
     /// </summary>
     /// <param name="root"></param>
     /// <param name="soubory"></param>
@@ -77,7 +79,7 @@ public class ZA : IZA
         #endregion
     }
 
-    
+
 
     static Type type = typeof(ZA);
 
@@ -88,7 +90,7 @@ public class ZA : IZA
 
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="root"></param>
     /// <param name="p"></param>
@@ -141,7 +143,7 @@ public class ZA : IZA
             foreach (ZipEntry zipEntry in zf)
             {
                 String entryFileName = zipEntry.Name;
-                byte[] buffer = new byte[4096];		// 4K is optimum
+                byte[] buffer = new byte[4096];     // 4K is optimum
                 Stream zipStream = zf.GetInputStream(zipEntry);
 
                 entryFileName = entryFileName.TrimEnd(AllCharsSE.slash).Replace(AllCharsSE.slash, AllCharsSE.bs);

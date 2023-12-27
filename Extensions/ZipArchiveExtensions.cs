@@ -1,3 +1,7 @@
+using SunamoZip.Extensions;
+
+namespace SunamoZip.Extensions;
+
 public static class ZipArchiveExtensions
 {
     public static void ExtractToDirectory(this ZipArchive archive, string destinationDirectoryName, bool overwrite)
@@ -17,7 +21,7 @@ public static class ZipArchiveExtensions
 
             if (!completeFileName.StartsWith(destinationDirectoryFullPath, StringComparison.OrdinalIgnoreCase))
                 throw new IOException(
-                    "Trying to extract file outside of destination directory. See this link for more info: https://snyk.io/research/zip-slip-vulnerability");
+                "Trying to extract file outside of destination directory. See this link for more info: https://snyk.io/research/zip-slip-vulnerability");
 
             if (file.Name == "")
             {

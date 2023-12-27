@@ -1,3 +1,7 @@
+using SunamoZip.Extensions;
+
+namespace SunamoZip;
+
 public class ZA : IZA
 {
     private const string zipExt = ".zip";
@@ -7,9 +11,9 @@ public class ZA : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string root)
+    CreateArchive(string root)
     {
 #if ASYNC
         await
@@ -21,9 +25,9 @@ public class ZA : IZA
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string root, IEnumerable<string> soubory)
+    CreateArchive(string root, IEnumerable<string> soubory)
     {
 #if ASYNC
         await
@@ -33,11 +37,11 @@ public class ZA : IZA
 
     public
 #if ASYNC
-async Task
+    async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string root, IEnumerable<string> soubory, string soubor)
+    CreateArchive(string root, IEnumerable<string> soubory, string soubor)
     {
         //Path.WithEndSlash(ref root);
 
@@ -51,9 +55,9 @@ async Task
                 using var entryStream = fileInArchive.Open();
                 using MemoryStream fileToCompressStream = new(
 #if ASYNC
-await
+                await
 #endif
-                    TFSE.ReadAllBytesArray(item));
+                TFSE.ReadAllBytesArray(item));
                 fileToCompressStream.CopyTo(entryStream);
             }
         }
@@ -70,9 +74,9 @@ await
 #if ASYNC
     async Task
 #else
-        void
+void
 #endif
-        CreateArchive(string root, string souborZip)
+    CreateArchive(string root, string souborZip)
     {
 #if ASYNC
         await
